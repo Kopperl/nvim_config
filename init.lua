@@ -104,41 +104,6 @@ require("nvim-treesitter.configs").setup{
 -- # Lsp #
 -- #######
 
--- ##############
--- # deprecated #
--- ##############
---
--- local lspconfig = require("lspconfig")
---
--- lspconfig.sqls.setup{
---     cmd = { "/home/kopperl/go/bin/sqls" },
--- }
--- lspconfig.rust_analyzer.setup{}
--- lspconfig.gopls.setup{}
--- lspconfig.ts_ls.setup{}
--- lspconfig.clangd.setup{
---     cmd = {
---         "clangd",
---         "--header-insertion=never",
---     }
--- }
--- lspconfig.jdtls.setup()
--- lspconfig.pyright.setup{}
--- lspconfig.tinymist.setup({
---     filetypes = { "typst" },
--- })
--- lspconfig.dafny.setup{
---     cmd = {
---         "dafny",
---         "server"
---     },
---     filetypes = {
---         "dafny",
---         "dfy"
---     },
---     root_dir = lspconfig.util.root_pattern("."),
--- }
-
 vim.lsp.enable("rust_analyzer")
 vim.lsp.enable("gopls")
 vim.lsp.enable("ts_ls")
