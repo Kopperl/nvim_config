@@ -109,6 +109,15 @@ vim.lsp.enable("gopls")
 vim.lsp.enable("ts_ls")
 vim.lsp.enable("tinymist")
 vim.lsp.enable("clangd")
+
+vim.lsp.config("jdtls", {
+    cmd = {
+        "env",
+        "JAVA_HOME=/usr/lib/jvm/java-25-openjdk",
+        "PATH=/usr/lib/jvm/java-25-openjdk/bin:" .. vim.env.PATH,
+        "jdtls",
+    },
+})
 vim.lsp.enable("jdtls")
 vim.lsp.enable("pyright")
 
